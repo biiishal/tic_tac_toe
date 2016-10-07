@@ -64,7 +64,7 @@ module TicTacToe
         board = Board.new
         allow(board).to receive(:winner?) { false }
         allow(board).to receive(:draw?) { false }
-        expect(board.game_over).to be_falsy
+        expect(board.game_over).to be_falsey
       end
     end
 
