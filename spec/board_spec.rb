@@ -50,6 +50,30 @@ module TicTacToe
       end
     end
 
+    # context "#formatted_grid" do
+    #   it "prints formatted_grid in the screen with respective cell values" do
+    #     grid = [
+    #       [x_cell, x_cell, x_cell],
+    #       [y_cell, y_cell, x_cell],
+    #       [x_cell, y_cell, y_cell]
+    #     ]
+    #     board = Board.new(grid: grid)
+    #     expected = "X X X\nY Y X\nX Y Y"
+    #     expect(board.formatted_grid).to eq expected
+    #   end
+
+    #   it "prints formatted_grid in the screen with _ if the cell value is empty" do
+    #     grid = [
+    #       [x_cell, '', ''],
+    #       [y_cell, '', ''],
+    #       [x_cell, '', '']
+    #     ]
+    #     board = Board.new(grid: grid)
+    #     expected = "X _ _\nY _ _\nX _ _"
+    #     expect(board.formatted_grid).to eq expected
+    #   end
+    # end
+
     context "#game_over" do
       it "returns :winner if winner? is true" do
         board = Board.new
@@ -118,7 +142,7 @@ module TicTacToe
           [x_cell, '', '']
         ]
         board = Board.new
-        expect(board.game_over)
+        expect(board.game_over).to be_falsey
       end
     end
 

@@ -10,18 +10,23 @@ module TicTacToe
       @current_player, @other_player = players.shuffle
     end
 
+    # Switches @current_player with the @other player.
     def switch_players
       @current_player, @other_player = @other_player, @current_player
     end
 
+    # Asks for the @current_user to enter a move in terms of number in 1..9.
     def solicit_move
       "#{@current_player.name}: Enter a number between 1 and 9 to make your move: "
     end
 
+    # Takes human input of 1..9 and converts it into grid coordinates.
     def get_move(human_move = gets.chomp)
       human_move_to_coordinate(human_move)
     end
 
+    # Checks if Board#game_over method returns :winner or :draw,
+    # and prints respective relevant messages.
     def game_over_message
       return "#{@current_player.name} won!" if board.game_over == :winner
       return "The game ended in a tie." if board.game_over == :draw
@@ -29,6 +34,7 @@ module TicTacToe
 
     private
 
+    # Maps human_move input to coordinates.
     def human_move_to_coordinate(human_move)
       mapping = {
         "1" => [0, 0],
