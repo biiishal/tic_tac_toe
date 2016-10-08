@@ -25,6 +25,7 @@ Or install it yourself as:
 Clone the repo to your machine. In command prompt or bash window, cd into the directory.
 
 Then for a demo execute:
+
     $ ruby example/example.rb
 
 
