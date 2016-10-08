@@ -32,6 +32,7 @@ module TicTacToe
       return "The game ended in a tie." if board.game_over == :draw
     end
 
+    # Main method to switch player turns and call other functions.
     def play
       puts "#{@current_player.name} has been randomly selected as player one."
       while true
