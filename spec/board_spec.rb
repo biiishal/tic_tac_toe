@@ -98,14 +98,14 @@ module TicTacToe
           [y_cell, y_cell, x_cell]
         ]
         board = Board.new(grid: grid)
-        expect(board.game_over).to_eq :winner
+        expect(board.game_over).to eq :winner
       end
 
       it "returns :draw when all spaces in the board are not empty" do
         grid = [
-          [x_cell, y_cell, y_cell],
           [x_cell, y_cell, x_cell],
-          [y_cell, x_cell, x_cell]
+          [x_cell, y_cell, x_cell],
+          [y_cell, x_cell, y_cell]
         ]
         board = Board.new(grid: grid)
         expect(board.game_over).to eq :draw
