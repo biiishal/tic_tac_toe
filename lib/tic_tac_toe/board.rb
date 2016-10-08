@@ -8,16 +8,21 @@ module TicTacToe
     end
 
     def get_cell(x, y)
-      @grid[x][y]
+      grid[x][y]
     end
 
     def set_cell(x, y, value)
-      get_cell(x, y).value = value
+      if get_cell(x, y).value.empty?
+        get_cell(x, y).value = value
+        true
+      else
+        false
+      end
     end
 
     def formatted_grid
       grid.each do |row|
-        puts row.map { |cell| cell.value.empty? ? cell.value : "_" }.join(" ")
+        puts row.map { |cell| cell.value.empty? ? "_": cell.value }.join(" ")
       end
     end
 
@@ -33,7 +38,7 @@ module TicTacToe
     end
 
     def winning_positions
-      @grid + @grid.transpose + diagonals
+      grid + grid.transpose + diagonals
     end
 
     def diagonals
@@ -56,7 +61,7 @@ module TicTacToe
     end
 
     def draw?
-      @grid.flatten.map { |cell| cell.value }.none_empty?
+      grid.flatten.map { |cell| cell.value }.none_empty?
     end
   end
 end

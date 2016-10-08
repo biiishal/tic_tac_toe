@@ -1,4 +1,4 @@
-require "tic_tac_toe/version"
+require_relative "./tic_tac_toe/version"
 
 %w(cell player board core_extensions game).each do |file|
   require_relative "./tic_tac_toe/#{file}.rb"
