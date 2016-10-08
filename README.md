@@ -22,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Clone the repo to your machine. In command prompt or bash window, cd into the directory.
+
+Then for a demo execute:
+    $ ruby example/example.rb
+
 
 ## Development
 
@@ -32,7 +36,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/tic_tac_toe.
+Bug reports and pull requests are welcome on GitHub at https://github.com/biiishal/tic_tac_toe.
 
 
 ## License
