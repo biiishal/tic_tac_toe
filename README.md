@@ -26,7 +26,7 @@ Clone the repo to your machine. In command prompt or bash window, cd into the di
 
 Then for a demo execute:
 
-    $ ruby example/example.rb
+    $ ruby example/example_game.rb
 
 
 ## Development
